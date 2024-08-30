@@ -1,0 +1,249 @@
+/* styles.css */
+
+.shop {
+  display: flex;
+}
+
+@font-face {
+  font-family: 'Lavish';
+  src: local('Lavish'), url('../public/Lavish.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilfiky-Regular';
+  src: local('Gilfiky-Regular'), url('../public/Gilfiky-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.shop-title {
+  flex-grow: 1;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin: 30px;
+  font-family: 'Lavish', sans-serif;
+  font-style:oblique;
+  font-size: 3.5em; /* 设置标题字体大小为2倍的默认大小，可以根据需要调整 */
+  position: relative; /* 使下划线和外框相对于标题进行定位 */
+}
+  .shop-title::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 2px;
+    background-color: black; /* 设置黑色下划线颜色 */
+    margin: 8px auto 0; /* 控制下划线位置 */
+}
+
+.container {
+  padding: 38px;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+.nav-links {
+  font-weight: bold;
+  justify-content: space-around;
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  color: rgb(255, 255, 255);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(19, 19, 19)
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid #ffcc00;
+}
+
+.connect-wallet-button{
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  margin-top: 50px;
+  gap: 0px;
+  justify-items: center;
+}
+
+.product-card {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid gray;
+  padding: 10px;
+  text-align: center;
+  width: 460px;
+  height: 500px;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* 悬停时的阴影效果 */
+}
+
+.product-card img {
+  width: auto;
+  height: 250px;
+}
+
+.product-discrib{
+  font-size: 20px;
+  font-family: Gilfiky-Regular;
+}
+
+.product-card button{
+  width: 120px;
+  font-size: 16px;
+}
+
+.search-form {
+  text-align: center; /* 居中文本 */
+  margin-top: 20px; /* 上方留出一些间距 */
+}
+
+.search-form label {
+  display: block; /* 将标签显示为块级元素 */
+  margin-bottom: 10px; /* 下方留出一些间距 */
+}
+
+.search-form input {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc; /* 添加边框 */
+  border-radius: 4px; /* 添加边框圆角 */
+  width: 500px; /* 设置输入框宽度 */
+}
+
+.search-form button {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffffff;
+  color: rgb(94, 94, 94);
+  border: 1px solid #000000; /* 添加边框 */
+  border-radius: 4px; /* 添加边框圆角 */
+}
+
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.account-dropdown span {
+  cursor: pointer;
+  display: block;
+  font-size: 18px;
+}
+
+.account-dropdown .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color:rgba(0, 0, 0, 0.7);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+}
+
+.account-dropdown:hover .sub-menu {
+  display: block;
+}
+
+.account-dropdown .sub-menu li {
+  padding: 8px;
+}
+
+.verify-container {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 120px;
+}
+
+.diamond-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  height: 100vh;
+}
+
+.diamond-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+.diamond-form label {
+  margin-bottom: 10px;
+  align-items: center;
+  margin-left: 120px;
+}
+
+.diamond-form input {
+  width: 350px;
+  margin-left: 20px;
+  background-color: rgba(255, 255, 255, 0);
+  border: #ffffff;
+}
+
+.authority-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.authority-form {
+  width: 300px;
+  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
+}
+
+.permissions-list {
+  width: 300px;
+}
+
+.permissions-list h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.permissions-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.permissions-list li {
+  margin-bottom: 5px;
+}
+
+.mine-form {
+  margin-top: 80px;
+}
+.grade-form {
+  margin-top: 30px;
+}
